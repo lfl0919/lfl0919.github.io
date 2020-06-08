@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>github 绑定域名</title>
+      <link href="/2020/06/08/github-%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"/>
+      <url>/2020/06/08/github-%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</url>
+      
+        <content type="html"><![CDATA[<h2 id="阿里ddns里这样设置-涂抹掉的地方填写你的github网页的仓库名-xxx-github-io"><a href="#阿里ddns里这样设置-涂抹掉的地方填写你的github网页的仓库名-xxx-github-io" class="headerlink" title="阿里ddns里这样设置,涂抹掉的地方填写你的github网页的仓库名 xxx.github.io"></a>阿里ddns里这样设置,涂抹掉的地方填写你的github网页的仓库名 <code>xxx.github.io</code></h2><img src="/2020/06/08/github-%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/setting.png">然后在网站根目录下的 `source`下新建一个文本，内容填写你的域名，如我的是`www.flpersonalweb.top'最后另存为`CNAME`不带格式后缀的.## 渲染加部署，执行：<pre class=" language-bash"><code class="language-bash">hexo ghexo d</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何打造自己的图库</title>
       <link href="/2020/06/07/%E5%A6%82%E4%BD%95%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%93/"/>
       <url>/2020/06/07/%E5%A6%82%E4%BD%95%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%93/</url>
