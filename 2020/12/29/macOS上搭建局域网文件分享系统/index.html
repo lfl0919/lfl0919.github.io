@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="建站记录, FL bolgs">
+    <meta name="keywords" content="macOS上搭建局域网文件分享系统, FL bolgs">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>建站记录 | FL bolgs</title>
+    <title>macOS上搭建局域网文件分享系统 | FL bolgs</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -371,12 +371,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">建站记录</h1>
+                    <h1 class="description center-align post-title">macOS上搭建局域网文件分享系统</h1>
                 </div>
             </div>
         </div>
@@ -501,23 +501,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%AB%99/">
-                                <span class="chip bg-color">网站</span>
+                            <a href="/tags/mac-os/">
+                                <span class="chip bg-color">mac os</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%BD%91%E7%AB%99/" class="post-category">
-                                网站
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -526,7 +517,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-06
+                    2020-12-29
                 </div>
                 
 
@@ -547,86 +538,57 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>记录建立博客中的问题</p>
+                <p><img src="/images/indexshortcut.png" alt></p>
+<p>KodExplorer是一款开源文件资源管理器，功能很强大我就不一一浪费时间去叙述了，这里主要记录下在macOS下搭建的过程。</p>
+<h1 id="项目来源"><a href="#项目来源" class="headerlink" title="项目来源"></a>项目来源</h1><blockquote>
+<p>官网：<a href="https://kodcloud.com/" target="_blank" rel="noopener">https://kodcloud.com/</a></p>
 </blockquote>
-<h2 id="去掉首页banner轮播图的背景颜色"><a href="#去掉首页banner轮播图的背景颜色" class="headerlink" title="去掉首页banner轮播图的背景颜色"></a>去掉首页banner轮播图的背景颜色</h2><p>打开<code>themes/matery/source/css/matery.css</code>文件(367行，也可以快速搜索.bg-cover:after进行定位):</p>
-<p>然后注释掉这两行css</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.bg-cover</span><span class="token pseudo-element">:after</span> </span><span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">/*  -webkit-animation: rainbow 60s infinite;
-    animation: rainbow 60s infinite;*/</span>
-<span class="token punctuation">}</span></code></pre>
-<h2 id="markdown-写博客语法高亮"><a href="#markdown-写博客语法高亮" class="headerlink" title="markdown 写博客语法高亮"></a>markdown 写博客语法高亮</h2><p>例如 ：<code>这段文字高亮</code></p>
-<pre><code>&lt;code&gt;这段文字高亮&lt;/code&gt;</code></pre><h2 id="hexo引用本地图片无法显示"><a href="#hexo引用本地图片无法显示" class="headerlink" title="hexo引用本地图片无法显示"></a>hexo引用本地图片无法显示</h2><h3 id="1-先在网站根目录安装插件"><a href="#1-先在网站根目录安装插件" class="headerlink" title="1.先在网站根目录安装插件"></a>1.先在网站根目录安装插件</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-asset-image --save</code></pre>
-<h3 id="2-打开网站根目录下的-config-yml，将false改为true"><a href="#2-打开网站根目录下的-config-yml，将false改为true" class="headerlink" title="2.打开网站根目录下的_config.yml，将false改为true"></a>2.打开网站根目录下的<code>_config.yml</code>，将<code>false</code>改为<code>true</code></h3><pre class=" language-bash"><code class="language-bash">post_asset_folder: <span class="token boolean">true</span></code></pre>
-<h3 id="3-打开-node-modules-hexo-asset-image-index-js，将内容更换为下面的代码"><a href="#3-打开-node-modules-hexo-asset-image-index-js，将内容更换为下面的代码" class="headerlink" title="3.打开/node_modules/hexo-asset-image/index.js，将内容更换为下面的代码"></a>3.打开<code>/node_modules/hexo-asset-image/index.js</code>，将内容更换为下面的代码</h3><pre class=" language-js"><code class="language-js"><span class="token string">'use strict'</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> cheerio <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'cheerio'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<blockquote>
+<p>Github项目地址：<a href="https://github.com/kalcaddle/KodExplorer" target="_blank" rel="noopener">https://github.com/kalcaddle/KodExplorer</a></p>
+</blockquote>
+<blockquote>
+<p>版本发布地址：<a href="https://github.com/kalcaddle/KodExplorer/releases" target="_blank" rel="noopener">https://github.com/kalcaddle/KodExplorer/releases</a></p>
+</blockquote>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>因为是PHP语言写的，无需数据库，搭建极其简单，Windows平台直接PhpStudy可以很快搭建一个，Linux下推荐使用宝塔面板来搭建，这里我就不多叙述了，相信大家可以分分钟解决的。因为工作转向macOS平台了，所以这里我只记录了macOS下搭建的一些配置，充分利用macOS自带的一些功能。</p>
+<h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><p>macOS内置了Apache，使用apachectl -v可以查看到版本相关信息，我的版本信息如下：</p>
+<pre class=" language-mac"><code class="language-mac">apachectl -v
+Server version: Apache/2.4.41 (Unix)
+Server built:   Aug 29 2019 19:01:57</code></pre>
+<p>首先来启动Apache服务：</p>
+<pre><code>sudo apachectl start</code></pre><p>这里需要<code>root</code>权限才可以启动</p>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><pre><code># 查看apache状态
+sudo apachectl status
 
-<span class="token comment" spellcheck="true">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span>
-<span class="token keyword">function</span> <span class="token function">getPosition</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> m<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+# 重启apache服务
+sudo apachectl restart
 
-<span class="token keyword">var</span> version <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>hexo<span class="token punctuation">.</span>version<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>filter<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'after_post_render'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
-  <span class="token keyword">var</span> config <span class="token operator">=</span> hexo<span class="token punctuation">.</span>config<span class="token punctuation">;</span>
-  <span class="token keyword">if</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>post_asset_folder<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">var</span> link <span class="token operator">=</span> data<span class="token punctuation">.</span>permalink<span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>version<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token function">Number</span><span class="token punctuation">(</span>version<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span>
-       <span class="token keyword">var</span> beginPos <span class="token operator">=</span> <span class="token function">getPosition</span><span class="token punctuation">(</span>link<span class="token punctuation">,</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">else</span>
-       <span class="token keyword">var</span> beginPos <span class="token operator">=</span> <span class="token function">getPosition</span><span class="token punctuation">(</span>link<span class="token punctuation">,</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".</span>
-    <span class="token keyword">var</span> endPos <span class="token operator">=</span> link<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    link <span class="token operator">=</span> link<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>beginPos<span class="token punctuation">,</span> endPos<span class="token punctuation">)</span><span class="token punctuation">;</span>
+# 停止aoache服务
+sudo apachectl stop
 
-    <span class="token keyword">var</span> toprocess <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'excerpt'</span><span class="token punctuation">,</span> <span class="token string">'more'</span><span class="token punctuation">,</span> <span class="token string">'content'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> toprocess<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token keyword">var</span> key <span class="token operator">=</span> toprocess<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-      <span class="token keyword">var</span> $ <span class="token operator">=</span> cheerio<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-        ignoreWhitespace<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-        xmlMode<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-        lowerCaseTags<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-        decodeEntities<span class="token punctuation">:</span> <span class="token boolean">false</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">// For windows style path, we replace '\' to '/'.</span>
-            <span class="token keyword">var</span> src <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'\\'</span><span class="token punctuation">,</span> <span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token regex">/http[s]*.*|\/\/.*/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>src<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
-               <span class="token operator">!</span><span class="token regex">/^\s*\//</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>src<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              <span class="token comment" spellcheck="true">// For "about" page, the first part of "src" can't be removed.</span>
-              <span class="token comment" spellcheck="true">// In addition, to support multi-level local directory.</span>
-              <span class="token keyword">var</span> linkArray <span class="token operator">=</span> link<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">return</span> elem <span class="token operator">!=</span> <span class="token string">''</span><span class="token punctuation">;</span>
-              <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token keyword">var</span> srcArray <span class="token operator">=</span> src<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">return</span> elem <span class="token operator">!=</span> <span class="token string">''</span> <span class="token operator">&amp;&amp;</span> elem <span class="token operator">!=</span> <span class="token string">'.'</span><span class="token punctuation">;</span>
-              <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token keyword">if</span><span class="token punctuation">(</span>srcArray<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span>
-                srcArray<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              src <span class="token operator">=</span> srcArray<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">,</span> config<span class="token punctuation">.</span>root <span class="token operator">+</span> link <span class="token operator">+</span> src<span class="token punctuation">)</span><span class="token punctuation">;</span>
-              console<span class="token punctuation">.</span>info<span class="token operator">&amp;&amp;</span>console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"update link as:-->"</span><span class="token operator">+</span>config<span class="token punctuation">.</span>root <span class="token operator">+</span> link <span class="token operator">+</span> src<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-            console<span class="token punctuation">.</span>info<span class="token operator">&amp;&amp;</span>console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"no src attr, skipped..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            console<span class="token punctuation">.</span>info<span class="token operator">&amp;&amp;</span>console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      data<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> $<span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h3 id="4-执行"><a href="#4-执行" class="headerlink" title="4.执行"></a>4.执行</h3><pre class=" language-bash"><code class="language-bash">hexo clean
-hexo g
-hexo s</code></pre>
-<h3 id="5-图片存放路径及引用方法"><a href="#5-图片存放路径及引用方法" class="headerlink" title="5.图片存放路径及引用方法"></a>5.图片存放路径及引用方法</h3><p>图片需存放在<code>_post</code>下与文章名同名的文件夹下<br><img src="/2020/06/06/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/images.jpg" alt="taylor swift"><br>引用方法如下：<br>1.</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">!</span><span class="token punctuation">[</span>taylor swift<span class="token punctuation">]</span><span class="token punctuation">(</span>images.jpg<span class="token punctuation">)</span></code></pre>
-<p>2.</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">!</span><span class="token punctuation">[</span>taylor swift<span class="token punctuation">]</span><span class="token punctuation">(</span>建站记录/images.jpg<span class="token punctuation">)</span></code></pre>
+# 测试apache配置
+sudo apachectl configtest</code></pre><h1 id="相关目录"><a href="#相关目录" class="headerlink" title="相关目录"></a>相关目录</h1><blockquote>
+<p>默认网站根目录：<code>/Library/WebServer/Documents</code><br>Apache配置目录：<code>/etc/apache2</code></p>
+</blockquote>
+<h1 id="PHP解析"><a href="#PHP解析" class="headerlink" title="PHP解析"></a>PHP解析</h1><p>macOS也内置了PHP，无需我们再二次安装，查看自带的PHP版本：</p>
+<pre><code>php-v
+PHP 7.3.8 (cli) (built: Aug 24 2019 19:38:14) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.8, Copyright (c) 1998-2018 Zend Technologies</code></pre><p>macOS 10.15自带的PHP版本是7.3.9的版本，搭建KodExplorer系统完全不是问题，编  辑Apache配置来解析PHP</p>
+<pre><code>sudo vim /etc/apache2/httpd.conf</code></pre><p>找到如下内容：</p>
+<pre><code>#LoadModule php7_module libexec/apache2/libphp7.so</code></pre><p>删掉前面的#取消注释，这样就可以解析PHP文件了</p>
+<blockquote>
+<p>这里灵活根据自己的PHP版本来取消注释</p>
+</blockquote>
+<h1 id="修改完配置文件后来重启Apache服务："><a href="#修改完配置文件后来重启Apache服务：" class="headerlink" title="修改完配置文件后来重启Apache服务："></a>修改完配置文件后来重启Apache服务：</h1><pre><code>sudo apachectl restart</code></pre><p>检查是否可以解析PHP文件，在Web目录下创建一个info.php文件，这里因为/etc这个目录需要高权限，所以需要放开权限才方便我们写入文件：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">chmod</span> -R 777 /Library/WebServer/Documents</code></pre>
+<blockquote>
+<p>安全生产环境中这样配置实际上不够安全，这里自己用的话 才放开777高权</p>
+</blockquote>
+<p>网站根目录写入内容如下;</p>
+<pre><code>&lt;?php phpinfo();?&gt;</code></pre><p>直接<code>echo</code>写文件更高效：</p>
+<pre><code>echo '&lt;?php phpinfo();?&gt;' &gt; /Library/WebServer/Documents/info.php</code></pre><p>浏览器访问：<a href="http://127.0.0.1/info.php" target="_blank" rel="noopener">127.0.0.1/info.php</a> 验证是否成功：<br><img src="/images/phpinfo.jpg" alt></p>
+<h1 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h1><p><a href="https://github.com/kalcaddle/KodExplorer/releases" target="_blank" rel="noopener">https://github.com/kalcaddle/KodExplorer/releases</a>下载最新版的打包源码，解压将源码拷贝到网站根目录下，这里需要给源码也设置高权限才可以成功安装，重新分配下权限:</p>
+<pre><code>chmod -R 777 /Library/WebServer/Documents/</code></pre><p>浏览器访问<a href="http://127.0.0.1/" target="_blank" rel="noopener">http://127.0.0.1/</a>即可安装，设置好密码后即可<br><img src="/images/localhost.png" alt></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -670,7 +632,7 @@ hexo s</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.flpersonalweb.top/2020/06/06/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/">http://www.flpersonalweb.top/2020/06/06/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</a>
+                    <a href="http://www.flpersonalweb.top/2020/12/29/macOS%E4%B8%8A%E6%90%AD%E5%BB%BA%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%B3%BB%E7%BB%9F/">http://www.flpersonalweb.top/2020/12/29/macOS%E4%B8%8A%E6%90%AD%E5%BB%BA%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%B3%BB%E7%BB%9F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -708,8 +670,8 @@ hexo s</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%AB%99/">
-                                    <span class="chip bg-color">网站</span>
+                                <a href="/tags/mac-os/">
+                                    <span class="chip bg-color">mac os</span>
                                 </a>
                             
                         </div>
@@ -1140,32 +1102,36 @@ hexo s</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/06/07/%E5%A6%82%E4%BD%95%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%93/">
+                <a href="/2020/12/29/macOS%E4%B8%8A%E6%90%AD%E5%BB%BA%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%B3%BB%E7%BB%9F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="如何打造自己的图库">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="macOS上搭建局域网文件分享系统">
                         
-                        <span class="card-title">如何打造自己的图库</span>
+                        <span class="card-title">macOS上搭建局域网文件分享系统</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            新建相册目录执行下面的命令：
-hexo new page galleries
-然后到站点根目录的source目录下找名称为 galleries 的目录，打开目录下的 *index.md * 文档，在原有基础上添加一下配置：
-type: "g
+                            
+KodExplorer是一款开源文件资源管理器，功能很强大我就不一一浪费时间去叙述了，这里主要记录下在macOS下搭建的过程。
+项目来源
+官网：https://kodcloud.com/
+
+
+Github项目地址：https://gith
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1173,6 +1139,15 @@ type: "g
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/mac-os/">
+                        <span class="chip bg-color">mac os</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1184,27 +1159,29 @@ type: "g
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/02/README_CN/">
+                <a href="/2020/09/22/%E5%A3%81%E7%BA%B8%E5%88%86%E4%BA%AB/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="说明">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="壁纸分享">
                         
-                        <span class="card-title">说明</span>
+                        <span class="card-title">壁纸分享</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo-theme-matery       
-🇺🇸English Document | 演示示例 | QQ 交流群1（已满）: 926552981 | QQ 交流群2（推荐）: 971887688
+                            
 
-这是一个采用 Material 
+
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { retu
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-22
                             </span>
                         <span class="publish-author">
                             
